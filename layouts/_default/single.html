@@ -4,10 +4,5 @@
 	<div>
 		{{ partial "textprocessing.html" . }}
 	</div>
-	{{ with .Site.DisqusShortname }}
-	<div>
-		{{ template "_internal/disqus.html" . }}
-	</div>
-	{{ end }}
 </article>
 {{ end }}
