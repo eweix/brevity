@@ -1,11 +1,23 @@
 <header>
-	<nav>
-		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-		{{ $context := .Page.Section }}
-		{{ with .Site.Menus.main }}
-			{{ range . }}
-				| <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-			{{ end }}
-		{{ end }}
-	</nav>
+    <span>
+        {{ partial "breadcrumbs.html" . }}
+        {{/*  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>  */}}
+    </span>
+    <span style="text-align: left;">
+        {{ $page := .Page }}
+        {{ with site.Menus.main }}
+            {{ $len := (len . ) }}
+            {{ range $index, $element := . }}
+                {{- $last := eq (add $index 1) $len }}
+                {{ if $page.IsMenuCurrent .Menu . }}
+                    <a class="active" aria-current="page" href="{{ .PageRef }}">{{ .Name }}</a>
+                {{ else if $page.HasMenuCurrent .Menu . }}
+                    <a class="active" aria-current="true" href="{{ .PageRef }}">{{ .Name }}</a>
+                {{ else }}
+                    <a href="{{ .PageRef }}">{{ .Name }}</a>
+                {{ end }}
+                {{ if not $last }} | {{- end }}
+            {{- end }}
+        {{ end }}
+    </span>
 </header>

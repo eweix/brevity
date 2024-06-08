@@ -1,0 +1,8 @@
+<span id="breadcrumbs">
+    <a href="{{ site.BaseURL }}">{{ site.Title }}</a>
+    {{- range .Ancestors.Reverse }} {{$context := . }}
+        {{ with .Slug }}/ <a href="{{ $context.RelPermalink }}">{{ . }}</a>{{ end }}
+    {{- end }}
+    {{$context := . }}
+    {{ with .Slug }}/ <a href="{{ $context.Permalink }}">{{ . }}</a>{{ end }}
+</span>

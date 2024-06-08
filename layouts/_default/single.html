@@ -1,8 +1,4 @@
 {{ define "main" }}
-<article>
 	<h1>{{ .Title }}</h1>
-	<div>
-		{{ partial "textprocessing.html" . }}
-	</div>
-</article>
+	{{ .Content }}
 {{ end }}
