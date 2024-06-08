@@ -1,0 +1,23 @@
+main {
+	display: block;
+	margin: 0 auto 2em auto;
+	max-width: $page-width;
+	position: relative;
+	padding: 1em;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid;
+	// font-size: calc(#{$font-size} + 4px);
+}
+
+footer {
+	margin-top: 2em;
+	border-top: 1px solid;
+	position: relative;
+	min-height: 30px;
+	display: flex;
+	justify-content: space-between;
+}

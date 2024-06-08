@@ -1,0 +1,30 @@
+.list {
+	margin-top: 2em;
+	display: grid;
+	gap: 8px;
+	grid-template-columns: 1fr min-content;
+}
+
+.list div {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.list a {
+	text-decoration: none;
+	// color: $text;
+}
+
+ul.shortlist {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.shortlist li {
+	padding-bottom: 0.6em;
+}
+
+ul.shortlist li li {
+	padding-bottom: 0px;
+}
