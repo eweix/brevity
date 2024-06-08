@@ -1,0 +1,10 @@
+<style>
+    {{- with (resources.Get "sass/_inline.scss" | toCSS | minify ) -}}
+        {{- .Content | safeCSS -}}
+    {{- end -}}
+    {{- if .Params.highlight -}}
+        {{- with (resources.Get "sass/_syntax.scss" | toCSS | minify ) -}}
+            {{- .Content | safeCSS -}}
+        {{- end -}}
+    {{- end -}}
+</style>
