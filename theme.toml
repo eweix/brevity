@@ -1,12 +1,29 @@
 name = "Brevity"
 license = "MIT"
 licenselink = "https://github.com/eweix/brevity/blob/master/LICENSE"
-description = "Fast Hugo theme with sidebar."
+description = "Responsive hugo theme with dark mode and inline css."
 homepage = "https://github.com/eweix/brevity/"
-tags = ["blog", "plain"]
+tags = ["blog", "plain", "responsive"]
 features = ["blog"]
 min_version = "0.20"
 
 [author]
   name = "eweix"
   homepage = "https://github.com/eweix"
+
+# set sections to publish in RSS feed
+mainSections = ['posts']
+
+[menus]
+[[menus.header]]
+  name = 'Home'
+  pageref = '/'
+  weight = 1
+[[menus.header]] 
+  name = 'Posts'
+  pageref = '/posts/'
+  weight = 2
+[[menus.footer]]
+  name    = 'RSS'
+  pageref = '/index.xml'
+  weight  = 1

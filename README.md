@@ -1,3 +1,10 @@
+# Brevity
+Brevity is a lightweight theme for [Hugo](https://gohugo.io). It features:
+- < 5kb scss, all inline.
+- Dark mode!
+- Responsive syntax highlighting.
+- No javascript, webfonts, or analytics.
+
 ## Installation
 
 In your Hugo site `themes` directory, run:
