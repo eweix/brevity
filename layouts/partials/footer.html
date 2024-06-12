@@ -3,11 +3,11 @@
 	<span>
 		{{ range $i, $e := . }}
 			{{ if $i }}|{{ end }}
-			<a href="{{ .PageRef }}">{{ .Name }}</a>
+			<a href="{{ .PageRef }}"
+				{{ if strings.Contains .PageRef "http" -}} target="_blank" {{- end -}}>
+					{{ .Name -}}
+			</a>
 		{{ end }}
-		<!-- Obligatory <a href="/colophon" aria-label="read about this website">colophon</a>. | -->
-		<!-- <a href="/index.xml" aria-label="follow me with RSS">RSS</a> | -->
-		<!-- <a href="/now" aria-label="what I'm working on right now">/Now</a> -->
 	</span>
 	{{ end }}
 	<span>
