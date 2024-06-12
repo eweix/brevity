@@ -14,7 +14,7 @@
 {{ partial "favicon.html" }}
 
 {{/* inline css */}}
-{{ partial "inline.html" }}
+{{ partial "inline.html" . }}
 
 {{/* RSS feed */}}
 {{ with .OutputFormats.Get "RSS" -}}
