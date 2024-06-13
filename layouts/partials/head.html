@@ -9,8 +9,13 @@
     <meta name="description" content="{{ . }}">
 {{- end -}}
 {{- with .Site.Params.author -}}
-<meta name="author" content="{{ . }}">
+    <meta name="author" content="{{ .Name }}">
 {{- end -}}
+
+{{/*  set meta description  */}}
+{{- with .Summary }}
+    <meta name="description" content="{{ . }}">
+{{ end -}}
 
 {{/*  favicon  */}}
 {{ partial "head/favicon.html" }}
