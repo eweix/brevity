@@ -27,3 +27,13 @@ mainSections = ['posts']
   name    = 'RSS'
   pageref = '/index.xml'
   weight  = 1
+
+[params.csp]
+  childsrc    = ["'self'"]  # configure behavior for web workers, nested scripts
+  fontsrc     = ["'self'"]  # where fonts can be loaded from
+  formaction  = ["'self'"]  # where form data can be submitted
+  framesrc    = ["'self'"]  # domains that can serve iframe tags
+  imgsrc      = ["'self'"]  # configure image sources
+  objectsrc   = ["'none'"]  # configure plugins
+  stylesrc    = ["'self'"]  # configure stylesheets
+  scriptsrc   = ["'self'"]  # configure js behavior
