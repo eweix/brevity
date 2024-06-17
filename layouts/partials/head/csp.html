@@ -1,5 +1,5 @@
 {{- with site.Params.csp -}}
     <meta http-equiv="Content-Security-Policy"
-        content="upgrade-insecure-requests; block-all-mixed-content;
+        content="block-all-mixed-content;
         {{ range . }} {{ .Name }} {{ .Source -}}; {{ end -}}">
 {{- end -}}
