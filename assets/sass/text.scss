@@ -13,6 +13,10 @@ a {
 	color: $link;
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
 blockquote {
 	font-style: italic;
 	margin: 1em 2em;
@@ -39,6 +43,10 @@ img {
     max-height: 20em;
 	border: 1px solid $text;
 	box-shadow: 5px 5px 5px #eee;
+}
+
+svg {
+	fill: $text;
 }
 
 table {
@@ -78,5 +86,8 @@ hr {
 	}
 	img {
 		box-shadow: 3px 3px 3px #666;
+	}
+	svg {
+		fill: $darktext;
 	}
 }
