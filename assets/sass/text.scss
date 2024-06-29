@@ -22,11 +22,6 @@ blockquote {
 	margin: 1em 2em;
 }
 
-// p {
-	// text-align: justify;
-	// text-justify: inter-word;
-// }
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: $sans;
 	line-height: 1.0;
@@ -71,6 +66,7 @@ hr {
 	border: none;
 	height: 1px;
 	background-color: $text;
+	max-width: 20em;
 }
 
 @media (prefers-color-scheme: dark) {
