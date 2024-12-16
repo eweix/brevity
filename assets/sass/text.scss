@@ -1,89 +1,109 @@
 body {
-	font-family: $font;
-	// -webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	line-height:1.5;
-	font-size: $font-size;
-	color: $text;
+  font-family: $font;
+  // -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  font-size: $font-size;
+  color: $text;
 }
 
 a {
-	text-decoration-skip-ink: auto;
-	text-decoration: underline;
-	color: $link;
+  text-decoration-skip-ink: auto;
+  text-decoration: underline;
+  color: $link;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 blockquote {
-	font-style: italic;
-	margin: 1em 2em;
+  font-style: italic;
+  margin: 1em 2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $sans;
-	line-height: 1.0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sans;
+  line-height: 1;
 }
 
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a, header a{
-	text-decoration: none; // remove heading underline
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+header a {
+  text-decoration: none; // remove heading underline
 }
 
 img {
-    display: block;
-    margin: 2em auto;
-	max-width: 80%;
-    max-height: 20em;
-	border: 1px solid $text;
-	box-shadow: 5px 5px 5px #eee;
+  display: block;
+  margin: 2em auto;
+  max-width: 80%;
+  max-height: 20em;
+  border: 1px solid $text;
+  box-shadow: 5px 5px 5px #eee;
 }
 
 svg {
-	fill: $text;
+  fill: $text;
 }
 
 table {
-    margin: 1em auto;
-	justify-content: center;
-	border-collapse: collapse;
-	// table-layout: fixed;
-	// width: 100%;
-	overflow-x: auto;
+  margin: 1em auto;
+  justify-content: center;
+  border-collapse: collapse;
+  // table-layout: fixed;
+  // width: 100%;
+  overflow-x: auto;
 }
 
 thead {
-	border-bottom: 1px solid;
+  border-bottom: 1px solid;
 }
 
 th {
-	padding: 0 50px; 
-	text-align: left;
+  padding: 0 50px;
+  text-align: left;
 }
 
 hr {
-	border: none;
-	height: 1px;
-	background-color: $text;
-	max-width: 20em;
+  border: none;
+  height: 1px;
+  background-color: $text;
+  max-width: 20em;
+}
+
+li.favorite {
+  list-style-type: "⭑ ";
+}
+
+li + li {
+  margin: 5px 0;
 }
 
 @media (prefers-color-scheme: dark) {
-	body {
-		color: $darktext;
-		background: $darkbackground;
-	}
-	a {
-		color: $darklink;
-	}
-	hr {
-		background-color: $darktext;
-	}
-	img {
-		box-shadow: 3px 3px 3px #666;
-	}
-	svg {
-		fill: $darktext;
-	}
+  body {
+    color: $darktext;
+    background: $darkbackground;
+  }
+  a {
+    color: $darklink;
+  }
+  hr {
+    background-color: $darktext;
+  }
+  img {
+    box-shadow: 3px 3px 3px #666;
+  }
+  svg {
+    fill: $darktext;
+  }
 }
+
