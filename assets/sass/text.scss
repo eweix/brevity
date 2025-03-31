@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   font-family: $sans;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 h1 {
@@ -58,10 +58,10 @@ header a {
 img {
   display: block;
   margin: 2em auto;
-  max-width: 80%;
-  max-height: 20em;
-  border: 1px solid $text;
-  box-shadow: 5px 5px 5px #eee;
+  max-width: 100%;
+  max-height: 40em;
+  // border: 1px solid $text;
+  // box-shadow: 5px 5px 5px #eee;
 }
 
 svg {
@@ -112,9 +112,9 @@ li + li {
   hr {
     background-color: $darktext;
   }
-  img {
-    box-shadow: 3px 3px 3px #666;
-  }
+  // img {
+  //   box-shadow: 3px 3px 3px #666;
+  // }
   svg {
     fill: $darktext;
   }

@@ -1,7 +1,7 @@
 <header>
     <span>
-        {{ partial "breadcrumbs.html" . }}
-        {{/*  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>  */}}
+    {{/* {{ partial "breadcrumbs.html" . }} */}}
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </span>
     {{ $page := .Page }}
     {{ with site.Menus.main }}
