@@ -1,5 +1,5 @@
 // change menu on small screens
-@media screen and (max-width: calc(5em + #{$page-width})) {
+@media screen and (max-width: 900px) {
   // main {
   // 	width: auto;
   // 	padding: 0.25em;
@@ -12,6 +12,25 @@
     grid-template-columns: 1fr;
   }
 
+  h1 {
+    font-size: 1.125em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1 em;
+  }
+
+  .meta {
+    font-size: 0.7em;
+  }
+
   img {
     max-width: 90%;
   }
@@ -21,18 +40,10 @@
     grid-row-gap: 0px;
   }
 
-  // 	div {
-  // 		white-space: normal;
-  // 	}
-
-  // 	a {
-  // 		text-decoration: underline;
-  // 	}
-
-  // }
-
   .list :nth-child(2n + 0) {
     margin-bottom: 1.5rem;
   }
-}
 
+  .meta {
+  }
+}
