@@ -37,7 +37,9 @@ h6 {
 h1 {
   font-size: $h1-size;
 }
-h2,
+h2 {
+  font-size: $h2-size;
+}
 h3,
 h4,
 h5,
@@ -101,21 +103,21 @@ li + li {
   margin: 5px 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: $darktext;
-    background: $darkbackground;
-  }
-  a {
-    color: $darklink;
-  }
-  hr {
-    background-color: $darktext;
-  }
-  // img {
-  //   box-shadow: 3px 3px 3px #666;
-  // }
-  svg {
-    fill: $darktext;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     color: $darktext;
+//     background: $darkbackground;
+//   }
+//   a {
+//     color: $darklink;
+//   }
+//   hr {
+//     background-color: $darktext;
+//   }
+//   // img {
+//   //   box-shadow: 3px 3px 3px #666;
+//   // }
+//   svg {
+//     fill: $darktext;
+//   }
+// }

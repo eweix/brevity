@@ -1,19 +1,20 @@
 code {
-	font-family: $mono;
-	font-size: $code-size;
-	white-space: pre-wrap;
+  font-family: $mono;
+  font-size: $code-size;
+  white-space: pre-wrap;
 }
 
 pre {
-	border: 1px solid $text;
-	box-shadow: 5px 5px 5px #eee;
-	overflow-x: auto;
-	padding: 1em;
+  border: 1px solid $text;
+  box-shadow: 5px 5px 5px #eee;
+  overflow-x: auto;
+  padding: 1em;
 }
 
-@media (prefers-color-scheme: dark) {
-	pre {
-		border: 1px solid $darktext;
-		box-shadow: 3px 3px 3px #666;
-	}
-}
+// @media (prefers-color-scheme: dark) {
+// 	pre {
+// 		border: 1px solid $darktext;
+// 		box-shadow: 3px 3px 3px #666;
+// 	}
+// }
+
