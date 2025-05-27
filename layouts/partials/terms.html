@@ -2,12 +2,12 @@
 {{- $taxonomy := .taxonomy }}
 
 {{- with $page.GetTerms $taxonomy }}
-    {{- $label := (index . 0).Parent.LinkTitle }}
-    {{ $len := (len . ) }}
-    {{ $label }}:
-    {{ range $index, $element := . }}
-        {{- $last := eq (add $index 1) $len -}}
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        {{- if not $last -}} , {{ end }}
-    {{ end }}
+  {{- $label := (index . 0).Parent.LinkTitle }}
+  {{ $len := (len . ) }}
+  {{ $label }}:
+  {{ range $index, $element := . }}
+    {{- $last := eq (add $index 1) $len -}}
+    <a class="p-category"> href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{- if not $last -}},{{ end }}
+  {{ end }}
 {{- end }}
