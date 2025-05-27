@@ -1,18 +1,20 @@
 <header>
-    <span>
+  <span>
     {{/* {{ partial "breadcrumbs.html" . }} */}}
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  </span>
+  {{ $page := .Page }}
+  {{ with site.Menus.main }}
+    <span style="text-align: left;">
+      {{ range $i, $e := . }}
+        {{ if $i }}|{{ end }}
+        <a
+          href="{{ .PageRef }}"
+          {{ if strings.Contains .PageRef "http" -}}target="_blank"{{- end -}}
+        >
+          {{ .Name -}}
+        </a>
+      {{ end }}
     </span>
-    {{ $page := .Page }}
-    {{ with site.Menus.main }}
-        <span style="text-align: left;">
-            {{ range $i, $e := . }}
-                    {{ if $i }}|{{ end }}
-                    <a href="{{ .PageRef }}"
-                        {{ if strings.Contains .PageRef "http" -}} target="_blank" {{- end -}}>
-                            {{ .Name -}}
-                    </a>
-            {{ end }}
-        </span>
-    {{ end }}
+  {{ end }}
 </header>

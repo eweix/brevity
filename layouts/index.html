@@ -1,14 +1,15 @@
 {{ define "main" }}
-	{{ .Content }}
+  {{ .Content }}
 
-	{{- with .Params.sections -}}
-		{{- range . }}
-			<h2><a href="/{{ . }}">{{ .LinkName }}</a></h2>
-			<ul class="shortlist">
-				{{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" . ) }}
-				<li><a href="{{ .Permalink }}">{{ .Title }}</a>. {{ .Summary }}</li>
-				{{ end -}}
-			</ul>
-		{{ end -}}
-	{{- end -}}
+  {{- with .Params.sections -}}
+    {{- range . }}
+      <h2><a href="/{{ . }}">{{ .LinkName }}</a></h2>
+      <ul class="shortlist">
+        {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" . ) }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a>. {{ .Summary }}</li>
+        {{ end -}}
+      </ul>
+    {{ end -}}
+  {{- end -}}
 {{ end }}
+

@@ -4,3 +4,4 @@
 
 {{ $replaceWith := printf `<svg width="32" height="32" class="%s" ${1}>${2}</svg>` $class }}
 {{ return (replaceRE $match $replaceWith (printf "/icons/%s.svg" $svg | readFile) | safeHTML) }}
+

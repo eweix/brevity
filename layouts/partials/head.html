@@ -1,23 +1,24 @@
 {{/* site metadata */}}
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{{/*  content security policy  */}}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{{/* content security policy */}}
 {{ partial "head/csp.html" }}
+
 
 <title>{{ .Title }} | {{ site.Title }}</title>
 {{- with .Site.Params.description -}}
-    <meta name="description" content="{{ . }}">
+  <meta name="description" content="{{ . }}" />
 {{- end -}}
 {{- with .Site.Params.author -}}
-    <meta name="author" content="{{ .Name }}">
+  <meta name="author" content="{{ .Name }}" />
 {{- end -}}
 
-{{/*  set meta description  */}}
+{{/* set meta description */}}
 {{- with .Summary }}
-    <meta name="description" content="{{ . }}">
+  <meta name="description" content="{{ . }}" />
 {{ end -}}
 
-{{/*  favicon  */}}
+{{/* favicon */}}
 {{ partial "head/favicon.html" }}
 
 {{/* inline css */}}
@@ -25,5 +26,6 @@
 
 {{/* RSS feed */}}
 {{ with .OutputFormats.Get "RSS" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{- end }}
+

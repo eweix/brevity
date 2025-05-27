@@ -1,16 +1,16 @@
 <footer>
-	{{ with site.Menus.footer }}
-	<span>
-		{{ range $i, $e := . }}
-			{{ if $i }}|{{ end }}
-			<a href="{{ .PageRef }}"
-				{{ if strings.Contains .PageRef "http" -}} target="_blank" {{- end -}}>
-					{{ .Name -}}
-			</a>
-		{{ end }}
-	</span>
-	{{ end }}
-	<span>
-		&copy; {{ now.Year }} {{ .Site.Params.Author.Name }}.
-	</span>
+  {{ with site.Menus.footer }}
+    <span>
+      {{ range $i, $e := . }}
+        {{ if $i }}|{{ end }}
+        <a
+          href="{{ .PageRef }}"
+          {{ if strings.Contains .PageRef "http" -}}target="_blank"{{- end -}}
+        >
+          {{ .Name -}}
+        </a>
+      {{ end }}
+    </span>
+  {{ end }}
+  <span> &copy; {{ now.Year }} {{ .Site.Params.Author.Name }}. </span>
 </footer>
